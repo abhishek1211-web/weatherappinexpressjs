@@ -9,13 +9,13 @@ const datahide = document.querySelector('.middle_layer');
 const getinfo = async(event)=>{
     event.preventDefault();
    
-    let cityval = city.name;
+    let cityval = cityname.value;
     if(cityval === ""){
         country.innerText = `Plz write the name before search`;
         datahide.classList.add('data_hide');
     }else{
         try{
-            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=35834226cf612076e62d6f0ec2d6f7f5`
+            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=9a5d73a5018a322851ba792435da83be`
             const response = await fetch(url);
             const data = await response.json();
             const arrdata = [data];
