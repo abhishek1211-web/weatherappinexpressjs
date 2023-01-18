@@ -9,7 +9,7 @@ const datahide = document.querySelector('.middle_layer');
 const getinfo = async(event)=>{
     event.preventDefault();
    
-    let cityval = cityname.value;
+    let cityval = city.name;
     if(cityval === ""){
         country.innerText = `Plz write the name before search`;
         datahide.classList.add('data_hide');
